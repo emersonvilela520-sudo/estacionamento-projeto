@@ -6,56 +6,81 @@
   <title>Estacionamento Vertical Automatizado — Colégio Pentágono</title>
   <meta name="description" content="Projeto de Estacionamento Vertical Automatizado — Curso Técnico em Mecatrônica, Colégio Pentágono.">
   <style>
-    :root{--bg:#f7f8fb;--card:#fff;--accent:#0b63d6;--muted:#6b7280;--maxw:1000px}
-    *{box-sizing:border-box}
-    body{font-family:Inter, Roboto, system-ui, -apple-system, "Segoe UI", Arial;line-height:1.5;margin:0;background:var(--bg);color:#111}
-    .container{max-width:var(--maxw);margin:32px auto;padding:20px}
-    header{display:flex;gap:16px;align-items:center}
-    .brand{display:flex;flex-direction:column}
-    h1{margin:0;font-size:1.6rem}
-    .subtitle{color:var(--muted);font-size:0.95rem}
-    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(12,18,35,0.06);margin-top:18px}
-    nav{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-    nav a{color:var(--accent);text-decoration:none;border:1px solid transparent;padding:8px 10px;border-radius:8px}
+    :root{
+      --bg:#f7f8fb;
+      --card:#fff;
+      --accent:#0b63d6;
+      --muted:#6b7280;
+      --maxw:1000px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Inter, Roboto, system-ui, -apple-system, "Segoe UI", Arial;
+      line-height:1.5;
+      background:var(--bg);
+      color:#111;
+      scroll-behavior:smooth;
+    }
+
+    .container{max-width:var(--maxw);margin:20px auto;padding:10px}
+    header{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+    .brand{display:flex;flex-direction:column;flex:1}
+    h1{margin:0;font-size:1.5rem}
+    .subtitle{color:var(--muted);font-size:0.9rem}
+    .card{
+      background:var(--card);
+      padding:15px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(12,18,35,0.06);
+      margin-top:15px;
+    }
+    nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    nav a{
+      color:var(--accent);
+      text-decoration:none;
+      border:1px solid transparent;
+      padding:6px 8px;
+      border-radius:8px;
+      font-size:0.9rem;
+    }
     nav a:hover{background:rgba(11,99,214,0.07)}
-    .grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:14px}
+    .grid{display:flex;flex-direction:column;gap:15px;margin-top:10px}
     .section h2{margin-top:0}
-    .meta{font-size:0.95rem;color:var(--muted);margin-bottom:8px}
-    ul.team{padding-left:1rem}
-    footer{margin-top:26px;text-align:center;color:var(--muted);font-size:0.9rem}
-    @media(max-width:900px){.grid{grid-template-columns:1fr}}
-    code{background:#f3f4f6;padding:2px 6px;border-radius:6px;font-family:monospace}
-    img{max-width:100%;border-radius:8px}
+    .meta{font-size:0.85rem;color:var(--muted);margin-bottom:6px}
+    ul.team{padding-left:1rem;margin-bottom:0}
+    img{max-width:100%;border-radius:8px;margin-top:10px;display:block}
+    footer{text-align:center;color:var(--muted);font-size:0.85rem;margin-top:20px}
+    @media(min-width:700px){
+      .grid{flex-direction:row}
+      main{flex:3;margin-right:15px}
+      aside{flex:1;position:sticky;top:20px;align-self:start}
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div style="width:72px;height:72px;border-radius:10px;background:linear-gradient(135deg,#0b63d6,#7bb3ff);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px">CP</div>
+      <div style="width:60px;height:60px;border-radius:10px;background:linear-gradient(135deg,#0b63d6,#7bb3ff);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px">CP</div>
       <div class="brand">
         <h1>Estacionamento Vertical Automatizado</h1>
-        <div class="subtitle">Colégio Pentágono — Curso Técnico em Mecatrônica · Ano 2025</div>
+        <div class="subtitle">Colégio Pentágono — Curso Técnico em Mecatrônica · 2025</div>
       </div>
     </header>
 
     <div class="card">
-      <div style="display:flex;justify-content:space-between;align-items:start;gap:18px;flex-wrap:wrap">
-        <div>
-          <div class="meta">Sala 507 – 1º, 2º e 3º Semestre · Noturno</div>
-          <p style="margin:6px 0 12px">Resumo: O presente trabalho apresenta o desenvolvimento de um sistema de Estacionamento Vertical Automatizado, passando por protótipo mecânico e integração com Arduino e sensores.</p>
-          <div style="font-weight:600;margin-bottom:6px">Integrantes</div>
-          <ul class="team">
-            <li>Diego Nascimento</li>
-            <li>Emerson Moreira Vilela</li>
-            <li>Gabriel Alves Lôredo</li>
-            <li>Marco Antonio Da Silva Ribeiro</li>
-            <li>Samuel Pereira Bezerra</li>
-          </ul>
-        </div>
-        <div style="min-width:220px;max-width:320px">
-          <img src="https://via.placeholder.com/300x200?text=Foto+do+Protótipo" alt="Protótipo do Estacionamento Vertical Automatizado"/>
-          <div style="font-size:0.85rem;color:var(--muted);margin-top:8px">Ano 2025</div>
-        </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div class="meta">Sala 507 – 1º, 2º e 3º Semestre · Noturno</div>
+        <p>Resumo: Desenvolvimento de um sistema de Estacionamento Vertical Automatizado, passando por protótipo mecânico e integração com Arduino e sensores.</p>
+        <div style="font-weight:600">Integrantes</div>
+        <ul class="team">
+          <li>Diego Nascimento</li>
+          <li>Emerson Moreira Vilela</li>
+          <li>Gabriel Alves Lôredo</li>
+          <li>Marco Antonio Da Silva Ribeiro</li>
+          <li>Samuel Pereira Bezerra</li>
+        </ul>
+        <img src="https://i.postimg.cc/w7L0X5KV/file-00000000d06061fb84b98df3e8702f32.png" alt="Protótipo do Estacionamento Vertical Automatizado"/>
       </div>
     </div>
 
@@ -69,64 +94,69 @@
       <a href="#referencias">6. Referências</a>
     </nav>
 
-    <main>
-      <article class="card section" id="introducao">
-        <h2>1. Introdução</h2>
-        <p>O projeto de Estacionamento Vertical Automatizado teve início no primeiro semestre com a construção de um protótipo mecânico de elevação baseado em motor de vidro elétrico, fuso e guias lineares. Essa primeira etapa permitiu validar a viabilidade estrutural e a eficiência mecânica do sistema.</p>
-        <p>No segundo semestre, a proposta foi expandida com a integração de componentes eletrônicos e programação utilizando Arduino, ponte H e sensores de detecção, transformando o protótipo em um modelo automatizado com aplicabilidade em sistemas reais.</p>
-      </article>
+    <div class="grid">
+      <main>
+        <article class="card section" id="introducao">
+          <h2>1. Introdução</h2>
+          <p>O projeto teve início no primeiro semestre com a construção de um protótipo mecânico de elevação baseado em motor de vidro elétrico, fuso e guias lineares.</p>
+          <p>No segundo semestre, foi integrado Arduino, ponte H e sensores de detecção, tornando o protótipo automatizado.</p>
+        </article>
 
-      <article class="card section" id="objetivo">
-        <h2>2. Objetivo</h2>
-        <p>O objetivo deste trabalho é desenvolver e implementar um protótipo de Estacionamento Vertical Automatizado, integrando soluções mecânicas e eletrônicas, de forma a oferecer eficiência, segurança e escalabilidade. Também busca proporcionar experiência prática aos alunos.</p>
-      </article>
+        <article class="card section" id="objetivo">
+          <h2>2. Objetivo</h2>
+          <p>Desenvolver e implementar um protótipo de Estacionamento Vertical Automatizado, integrando soluções mecânicas e eletrônicas, oferecendo eficiência, segurança e experiência prática.</p>
+        </article>
 
-      <article class="card section" id="desenvolvimento">
-        <h2>3. Desenvolvimento</h2>
+        <article class="card section" id="desenvolvimento">
+          <h2>3. Desenvolvimento</h2>
 
-        <section id="estrutura">
-          <h3>3.1 Estrutura Mecânica</h3>
-          <p>Foi construído um sistema de elevação utilizando motor de vidro elétrico, perfil de alumínio, acrílico, fuso de 8 mm, mancais e guias lineares. Essa estrutura garantiu estabilidade e precisão no movimento da plataforma.</p>
-          <img src="https://via.placeholder.com/300x200?text=Estrutura+Mecânica" alt="Estrutura Mecânica do protótipo"/>
-        </section>
+          <section id="estrutura">
+            <h3>3.1 Estrutura Mecânica</h3>
+            <p>Sistema de elevação com motor de vidro elétrico, perfil de alumínio, acrílico, fuso de 8 mm, mancais e guias lineares.</p>
+            <img src="https://i.postimg.cc/ppzqfQNf/IMG-20250912-WA0038.jpg" alt="Estrutura Mecânica"/>
+          </section>
 
-        <section id="integracao">
-          <h3>3.2 Integração Eletrônica</h3>
-          <p>Implementou-se a automação utilizando Arduino Uno como unidade de controle, ponte H para inversão de polaridade e sensores infravermelhos para detecção de limites de curso. O controle bidirecional do motor e as paradas automáticas aumentaram a segurança.</p>
-          <img src="https://via.placeholder.com/300x200?text=Arduino+e+Sensores" alt="Integração Eletrônica com Arduino e sensores"/>
-        </section>
+          <section id="integracao">
+            <h3>3.2 Integração Eletrônica</h3>
+            <p>Automação com Arduino Uno, ponte H e sensores infravermelhos. Controle bidirecional do motor e paradas automáticas.</p>
+            <img src="https://i.postimg.cc/nCB04K8G/IMG-20250912-WA0040.jpg" alt="Integração Eletrônica"/>
+            <img src="https://i.postimg.cc/xcMtvGrP/IMG-20250912-WA0041.jpg" alt="Componentes adicionais"/>
+          </section>
 
-        <section id="desafios">
-          <h3>3.3 Desafios Encontrados</h3>
-          <p>Foram enfrentadas dificuldades na programação do Arduino, alinhamento da maquete e restrição de tempo, exigindo desmontagens e substituições de componentes para alcançar precisão e estabilidade.</p>
-        </section>
+          <section id="desafios">
+            <h3>3.3 Desafios Encontrados</h3>
+            <p>Dificuldades na programação, alinhamento da maquete e restrição de tempo, exigindo desmontagens e substituições de componentes.</p>
+            <img src="https://i.postimg.cc/MvVd70kt/IMG-20250912-WA0069.jpg" alt="Desafios"/>
+          </section>
 
-        <section id="diagrama">
-          <h3>3.4 Diagrama de Funcionamento</h3>
-          <img src="https://via.placeholder.com/300x200?text=Diagrama+de+Funcionamento" alt="Diagrama de Funcionamento do Estacionamento Automatizado"/>
-        </section>
-      </article>
+          <section id="diagrama">
+            <h3>3.4 Diagrama de Funcionamento</h3>
+            <img src="https://i.postimg.cc/GHGqFP0P/Screenshot-20250916-095434-589.png" alt="Diagrama de Funcionamento"/>
+            <img src="https://i.postimg.cc/zVK0CwmS/Screenshot-20250924-225609-721.png" alt="Diagrama adicional"/>
+          </section>
+        </article>
 
-      <article class="card section" id="resultados">
-        <h2>4. Resultados</h2>
-        <p>O sistema apresentou movimentação vertical e transversal funcionais, paradas automáticas controladas por sensores IR e gerenciamento via Arduino. O protótipo é base para futuras expansões.</p>
-      </article>
+        <article class="card section" id="resultados">
+          <h2>4. Resultados</h2>
+          <p>O sistema apresentou movimentação vertical e transversal funcionais, paradas automáticas controladas por sensores IR e gerenciamento via Arduino.</p>
+        </article>
 
-      <article class="card section" id="conclusao">
-        <h2>5. Conclusão</h2>
-        <p>O projeto demonstrou a eficácia da integração entre mecânica, eletrônica e programação, evoluindo de uma estrutura mecânica para um sistema automatizado capaz de simular aplicações reais de automação predial.</p>
-      </article>
+        <article class="card section" id="conclusao">
+          <h2>5. Conclusão</h2>
+          <p>O projeto demonstrou a eficácia da integração entre mecânica, eletrônica e programação, evoluindo para um sistema automatizado realista.</p>
+        </article>
 
-      <article class="card section" id="referencias">
-        <h2>6. Referências</h2>
-        <ol>
-          <li>BOLTON, W. Mecatrônica: sistemas de controle eletromecânico. 5.ed. São Paulo: Pearson, 2015.</li>
-          <li>OGATA, Katsuhiko. Engenharia de Controle Moderno. 5.ed. São Paulo: Pearson, 2010.</li>
-          <li>SUNFAR. Manual do Inversor de Frequência E550. Sunfar, 2023.</li>
-          <li>Material e anotações das aulas do Curso Técnico em Mecatrônica – Colégio Pentágono, 2024-2025.</li>
-        </ol>
-      </article>
-    </main>
+        <article class="card section" id="referencias">
+          <h2>6. Referências</h2>
+          <ol>
+            <li>BOLTON, W. Mecatrônica: sistemas de controle eletromecânico. 5.ed. São Paulo: Pearson, 2015.</li>
+            <li>OGATA, Katsuhiko. Engenharia de Controle Moderno. 5.ed. São Paulo: Pearson, 2010.</li>
+            <li>SUNFAR. Manual do Inversor de Frequência E550. Sunfar, 2023.</li>
+            <li>Material e anotações das aulas do Curso Técnico em Mecatrônica – Colégio Pentágono, 2024-2025.</li>
+          </ol>
+        </article>
+      </main>
+    </div>
 
     <footer>
       Criado automaticamente a partir do PDF fornecido — Colégio Pentágono · 2025
