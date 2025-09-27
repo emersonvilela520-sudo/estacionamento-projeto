@@ -15,7 +15,6 @@
       --card:#fff;
       --accent:#0b63d6;
       --muted:#6b7280;
-      --danger:#e74c3c;
       --maxw:1000px;
     }
 
@@ -59,8 +58,6 @@
     ul.team{padding-left:1rem;margin-bottom:0}
     img{max-width:100%;border-radius:8px;margin-top:10px;display:block;cursor:pointer;transition:transform 0.2s}
     img:hover{transform:scale(1.02)}
-    footer{text-align:center;color:var(--muted);font-size:0.85rem;margin-top:20px}
-
     .flex-row{display:flex;gap:10px;flex-wrap:wrap}
     .flex-col{display:flex;flex-direction:column;gap:10px}
 
@@ -74,8 +71,8 @@
   <div class="container">
     <header>
       <div style="position:relative; width:72px;height:72px;">
-        <img src="https://i.postimg.cc/zVK0CwmS/Screenshot-20250924-225609-721.png" alt="Logo Imagem" style="width:100%;height:100%;border-radius:12px;object-fit:cover;position:absolute;top:0;left:0;"/>
-        <div style="width:60px;height:60px;border-radius:10px;background:linear-gradient(135deg,#0b63d6,#7bb3ff);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;position:absolute;top:6px;left:6px;">CP</div>
+        <!-- Imagem CP substituída pela logo fornecida -->
+        <img src="https://i.postimg.cc/GHGqFP0P/Screenshot-20250916-095434-589.png" alt="Logo CP" style="width:100%;height:100%;border-radius:12px;object-fit:cover;"/>
       </div>
       <div class="brand">
         <h1>Estacionamento Vertical Automatizado</h1>
@@ -85,6 +82,7 @@
 
     <nav class="card" aria-label="Sumário">
       <strong>Sumário</strong>
+      <a href="#integrantes">Integrantes</a>
       <a href="#introducao">1. Introdução</a>
       <a href="#objetivo">2. Objetivo</a>
       <a href="#desenvolvimento">3. Desenvolvimento</a>
@@ -95,11 +93,22 @@
 
     <div class="grid">
       <main>
+        <article class="card section" id="integrantes">
+          <h2>Integrantes</h2>
+          <ul class="team">
+            <li>Diego Nascimento</li>
+            <li>Emerson Moreira Vilela</li>
+            <li>Gabriel Alves Lôredo</li>
+            <li>Marco Antonio Da Silva Ribeiro</li>
+            <li>Samuel Pereira Bezerra</li>
+          </ul>
+          <!-- Foto acima da introdução -->
+          <img src="https://i.postimg.cc/ppzqfQNf/IMG-20250912-WA0038.jpg" alt="Foto Integrantes/Protótipo"/>
+        </article>
+
         <article class="card section" id="introducao">
           <h2>1. Introdução</h2>
           <p>O projeto teve início no primeiro semestre com a construção de um protótipo mecânico de elevação baseado em motor de vidro elétrico, fuso e guias lineares.</p>
-          <!-- 2ª imagem agora como 1ª -->
-          <img src="https://i.postimg.cc/ppzqfQNf/IMG-20250912-WA0038.jpg" alt="Protótipo"/>
         </article>
 
         <article class="card section" id="objetivo">
@@ -112,7 +121,6 @@
           <section id="estrutura">
             <h3>3.1 Estrutura Mecânica</h3>
             <div class="flex-row">
-              <!-- 3ª e 5ª imagens juntas -->
               <img src="https://i.postimg.cc/nCB04K8G/IMG-20250912-WA0040.jpg" alt="Estrutura Mecânica 1"/>
               <img src="https://i.postimg.cc/MvVd70kt/IMG-20250912-WA0069.jpg" alt="Estrutura Mecânica 2"/>
             </div>
@@ -120,14 +128,12 @@
 
           <section id="integracao">
             <h3>3.2 Integração Eletrônica</h3>
-            <!-- 3ª imagem original mantida -->
             <img src="https://i.postimg.cc/xcMtvGrP/IMG-20250912-WA0041.jpg" alt="Integração Eletrônica"/>
           </section>
 
           <section id="diagrama">
             <h3>3.4 Diagrama de Funcionamento</h3>
             <div class="flex-col">
-              <!-- 7ª e 1ª imagens juntas, empilhadas -->
               <img src="https://i.postimg.cc/zVK0CwmS/Screenshot-20250924-225609-721.png" alt="Diagrama 1"/>
               <img src="https://i.postimg.cc/w7L0X5KV/file-00000000d06061fb84b98df3e8702f32.png" alt="Diagrama 2"/>
             </div>
